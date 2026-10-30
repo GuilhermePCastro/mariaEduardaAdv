@@ -96,7 +96,7 @@ body {
 
 /* Fundos Escuros Institucionais com base em #815F5E */
 .bg-hero-institucional {
-  background-color: #815F5E;
+  background-color: #815f5e;
   background-image:
     radial-gradient(circle at 18% 22%, rgba(201, 171, 107, 0.18) 0%, transparent 45%),
     radial-gradient(circle at 85% 30%, rgba(232, 222, 221, 0.12) 0%, transparent 50%),
@@ -109,7 +109,7 @@ body {
 }
 
 .bg-faixa-autoridade {
-  background-color: #4A3231;
+  background-color: #6b4c4b;
   border-top: 1px solid rgba(232, 222, 221, 0.14);
   border-bottom: 1px solid rgba(232, 222, 221, 0.14);
 }
