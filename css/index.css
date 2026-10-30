@@ -1,0 +1,197 @@
+/* ==========================================================================
+   CSS PRINCIPAL - DRA. MARIA EDUARDA ROEEKER | ADVOCACIA CÍVEL E FAMÍLIA
+   Stack: Tailwind CSS v4 + Custom Utilities & Keyframes
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+/* Configuração de Tema no Tailwind CSS v4 */
+@theme {
+  --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Paleta Institucional Personalizada - Dra. Maria Eduarda Roeeker */
+  --color-primaria: #E8DEDD;
+  --color-primaria-clara: #F5F0EF;
+  --color-primaria-escura: #D5C5C3;
+
+  --color-marsala: #815F5E;
+  --color-marsala-escuro: #5E4241;
+  --color-marsala-profundo: #3B2726;
+  --color-marsala-noite: #261818;
+
+  --color-ouro-escuro: #8B6537;
+  --color-ouro-medio: #BF9F64;
+  --color-ouro-claro: #C9AB6B;
+
+  --color-esmeralda: #059669;
+  --color-esmeralda-hover: #047857;
+}
+
+/* ==========================================================================
+   VARIÁVEIS CSS & CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+:root {
+  --cor-primaria-destaque: #E8DEDD;
+  --cor-fundo-escuro: #815F5E;
+  --cor-fundo-escuro-profundo: #3B2726;
+  --cor-fundo-claro: #E8DEDD;
+  --cor-ouro-1: #8B6537;
+  --cor-ouro-2: #BF9F64;
+  --cor-ouro-3: #C9AB6B;
+  --gradiente-institucional: linear-gradient(135deg, #8B6537 0%, #BF9F64 50%, #C9AB6B 85%, #C9AB6B 100%);
+  --gradiente-institucional-hover: linear-gradient(135deg, #76542C 0%, #B39154 50%, #DFC385 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: #261818;
+  background-color: var(--cor-fundo-claro);
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Seleção de texto personalizada */
+::selection {
+  background-color: #815F5E;
+  color: #E8DEDD;
+}
+
+/* ==========================================================================
+   UTILITÁRIOS DE CORES E GRADIENTES INSTITUCIONAIS
+   ========================================================================== */
+
+/* Texto com Gradiente Dourado/Bronze Institucional */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #BF9F64 0%, #E5C98B 48%, #C9AB6B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Variante para fundos claros (maior contraste óptico) */
+.text-gold-gradient-dark {
+  background: linear-gradient(135deg, #8B6537 0%, #A9844A 55%, #8B6537 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fundo em Gradiente Dourado Institucional (#8B6537 -> #BF9F64 -> #C9AB6B -> #C9AB6B) */
+.bg-gold-gradient {
+  background: var(--gradiente-institucional);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bg-gold-gradient:hover {
+  background: var(--gradiente-institucional-hover);
+  box-shadow: 0 12px 28px -6px rgba(139, 101, 55, 0.45);
+}
+
+/* Fundos Escuros Institucionais com base em #815F5E */
+.bg-hero-institucional {
+  background-color: #815F5E;
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(201, 171, 107, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(232, 222, 221, 0.12) 0%, transparent 50%),
+    linear-gradient(145deg, #4A3231 0%, #815F5E 52%, #593E3D 100%);
+}
+
+.bg-secao-escura {
+  background-color: #815F5E;
+  background-image: linear-gradient(135deg, #432D2C 0%, #815F5E 55%, #4A3231 100%);
+}
+
+.bg-faixa-autoridade {
+  background-color: #4A3231;
+  border-top: 1px solid rgba(232, 222, 221, 0.14);
+  border-bottom: 1px solid rgba(232, 222, 221, 0.14);
+}
+
+.bg-secao-clara {
+  background-color: #E8DEDD;
+}
+
+.bg-secao-clara-suave {
+  background-color: #F4EEEE;
+}
+
+/* Molduras e Efeitos Glassmorphism */
+.glass-card-dark {
+  background: rgba(59, 39, 38, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(232, 222, 221, 0.22);
+}
+
+.border-gold-subtle {
+  border-color: rgba(201, 171, 107, 0.35);
+}
+
+/* ==========================================================================
+   ANIMAÇÕES DE SCROLL (INTERSECTION OBSERVER)
+   ========================================================================== */
+
+.animar-cima,
+.animar-esquerda,
+.animar-direita {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animar-cima {
+  transform: translateY(32px);
+}
+
+.animar-esquerda {
+  transform: translateX(-36px);
+}
+
+.animar-direita {
+  transform: translateX(36px);
+}
+
+.animar-cima.visivel,
+.animar-esquerda.visivel,
+.animar-direita.visivel {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Delays escalonados para grids e listas */
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+/* Respeito às configurações de acessibilidade do usuário */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animar-cima,
+  .animar-esquerda,
+  .animar-direita {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
