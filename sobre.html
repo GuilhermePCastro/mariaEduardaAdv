@@ -33,7 +33,8 @@
           />
         </a>
 
-        <nav class="hidden md:flex items-center gap-7 lg:gap-8" aria-label="Navegação Principal">
+        <!-- Menu de Navegação Desktop -->
+        <nav class="hidden xl:flex items-center gap-7 lg:gap-8" aria-label="Navegação Principal">
           <a href="index.html" class="text-sm font-medium text-[#E8DEDD]/85 hover:text-[#C9AB6B] transition-colors">Início</a>
           <a href="areas-de-atuacao.html" class="text-sm font-medium text-[#E8DEDD]/85 hover:text-[#C9AB6B] transition-colors">Áreas de Atuação</a>
           <a href="index.html#diferenciais" class="text-sm font-medium text-[#E8DEDD]/85 hover:text-[#C9AB6B] transition-colors">Diferenciais</a>
@@ -42,7 +43,8 @@
           <a href="contato.html" class="text-sm font-medium text-[#E8DEDD]/85 hover:text-[#C9AB6B] transition-colors">Contato</a>
         </nav>
 
-        <div class="hidden md:flex items-center">
+        <!-- Botão CTA de Destaque no Header -->
+        <div class="hidden xl:flex items-center">
           <a
             href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
             target="_blank"
@@ -57,7 +59,8 @@
           </a>
         </div>
 
-        <div class="flex md:hidden">
+        <!-- Botão Hambúrguer Mobile -->
+        <div class="flex xl:hidden">
           <button
             id="mobile-menu-btn"
             type="button"
@@ -78,12 +81,23 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-[#3B2726] border-b border-[#E8DEDD]/15 px-4 pt-3 pb-6 space-y-2">
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-[#3B2726] border-b border-[#E8DEDD]/15 px-4 pt-3 pb-6 space-y-2">
       <a href="index.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#E8DEDD]/90 hover:bg-white/10">Início</a>
       <a href="areas-de-atuacao.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#E8DEDD]/90 hover:bg-white/10">Áreas de Atuação</a>
       <a href="sobre.html" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-[#C9AB6B] bg-white/5">Sobre a Advogada</a>
       <a href="artigos.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#E8DEDD]/90 hover:bg-white/10">Artigos Jurídicos</a>
       <a href="contato.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#E8DEDD]/90 hover:bg-white/10">Contato</a>
+      <div class="pt-3 border-t border-[#E8DEDD]/15 flex flex-col gap-2">
+        <a
+          href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold text-white bg-[#04865d] hover:bg-[#047857] shadow-md"
+        >
+          <span>Agendar Consulta via WhatsApp</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -91,12 +105,12 @@
     <!-- ======================================================================
          BIOGRAFIA PRINCIPAL E RETRATO INSTITUCIONAL
          ====================================================================== -->
-    <section class="bg-hero-institucional text-[#E8DEDD] py-16 sm:py-16 overflow-hidden">
+    <section class="bg-hero-institucional text-[#E8DEDD] py-10 sm:py-12 overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
           <!-- Coluna Esquerda: Texto Biográfico (7 Colunas) -->
-          <div class="lg:col-span-7 space-y-6 animar-esquerda">
+          <div class="lg:col-span-7 space-y-6 animar-esquerda mb-0 md:mb-30">
            
             <h1 class="font-serif text-3xl sm:text-5xl font-bold leading-tight text-[#E8DEDD]">
               Dra. Maria Eduarda Roeeker
