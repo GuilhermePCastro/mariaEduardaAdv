@@ -49,6 +49,8 @@ html {
   font-family: var(--font-sans);
   color: #261818;
   background-color: var(--cor-fundo-claro);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
